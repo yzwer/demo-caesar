@@ -25,7 +25,7 @@ int main(void)
 {
     check_magic_number();
 
-    char orig_str[] = "len less than 33";
+    char orig_str[] = "more than than 33, more than than 33, more than than 33, more than than 33, more than than 33";
 
     printf("Test 1: Shift with a negative input\n");
     gen_test(orig_str, -3);
