@@ -21,6 +21,9 @@ void gen_test(char *str, int shift, int len)
     free(res2);
 }
 
+unsigned int A;
+unsigned int B;
+
 int main(void)
 {
     check_magic_number();
@@ -28,7 +31,10 @@ int main(void)
     char orig_str[] = "more than than 33, more than than 33, more than than 33, more than than 33, more than than 33";
 
     printf("Test 1: Shift with a negative input\n");
+    A = 100u / (5 * 0);
     gen_test(orig_str, -3, sizeof(orig_str));
+    B = 331u % 0;
+    B = 333u % -1;
     printf("\nTest 2: Shift with a positive input\n");
     gen_test(orig_str, 7, sizeof(orig_str));
 
