@@ -5,7 +5,7 @@ void check_magic_number(void);
    \param [in] shift The right shift to perform
    \return The pointer to the encrypted string
 */
-char *caesar_encrypt(char *str, int shift);
+char *caesar_encrypt(char *str, int shift, int len);
 
 /* \brief Decrypt a string with a left shift specified by the user
    \param [in] str The string to decrypt
