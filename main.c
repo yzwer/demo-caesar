@@ -3,12 +3,12 @@
 
 #include "caesar.h"
 
-void gen_test(char *str, int shift)
+void gen_test(char *str, int shift, int len)
 {
     char *res1, *res2;
 
     printf("Encrypt text '%s'\n", str);
-    res1 = caesar_encrypt(str, shift);
+    res1 = caesar_encrypt(str, shift,len);
     if (!res1) return;
     printf("Result:       %s\n", res1);
 
@@ -28,9 +28,9 @@ int main(void)
     char orig_str[] = "more than than 33, more than than 33, more than than 33, more than than 33, more than than 33";
 
     printf("Test 1: Shift with a negative input\n");
-    gen_test(orig_str, -3);
+    gen_test(orig_str, -3, sizeof(orig_str));
     printf("\nTest 2: Shift with a positive input\n");
-    gen_test(orig_str, 7);
+    gen_test(orig_str, 7, sizeof(orig_str));
 
     return 0;
 }
