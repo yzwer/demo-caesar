@@ -19,11 +19,11 @@ int absolute_int(int x)
     return abs_x;
 }
 
-char *caesar_encrypt(char *str, int shift)
+char *caesar_encrypt(char *str, int shift, int len)
 {
     int abs_shift = absolute_int(shift);
     int i = 0;
-    char *buf = (char *)malloc(33);
+    char *buf = (char *)malloc(len+1);
 
     if (buf) {
         while (*str) {
