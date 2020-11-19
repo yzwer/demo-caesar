@@ -23,7 +23,7 @@ char *caesar_encrypt(char *str, int shift, int len)
 {
     int abs_shift = absolute_int(shift);
     int i = 0;
-    char *buf = (char *)malloc(len+1);
+    char *buf = (char *)malloc(len-1);
 
     if (buf) {
         while (*str) {
